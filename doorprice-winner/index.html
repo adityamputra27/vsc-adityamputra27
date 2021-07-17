@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doorprize Winner</title>
+</head>
+<body>
+    
+    <div class="container" style="text-align: center;">
+        <label for="">Masukkan Jumlah Peserta</label>
+        <input type="text" id="jumlah">
+        <h1 id="hasil">0</h1>
+        <button id="acak" style="text-align: center;">Acak Pemenang</button>
+    </div>
+    
+    <script>
+        const button = document.querySelector('#acak')
+        button.addEventListener('click', function () {
+            
+            var interval = null;
+
+            interval = setInterval(function(){
+                
+                let angka = document.getElementById('jumlah').value
+
+                for (let i = 0; i < angka.length; i++) {
+                    
+                }
+                
+            }, 50);
+
+        })
+    </script>
+</body>
+</html>
