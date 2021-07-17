@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ddd;
+}
+.card {
+    background-color: white;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10em auto;
+    box-shadow: 5px 5px rgba(0,0,0,0.5);
+    position: relative;
+    transform: rotatey(calc(var(--mouse-x) * 2deg - 10deg)) rotatex(calc(var(--mouse-x) * -2deg - 10deg));
+}
+.card::before {
+    --translate-x: calc(var(--mouse-x) * -1px + 15px);
+    --translate-y: calc(var(--mouse-y) * -1px + 15px);
+    transform: translateX(var(--translate-x));
+}
+.card::after {
+    --translate-x: calc(var(--mouse-x) * -1px + 15px);
+    --translate-y: calc(var(--mouse-y) * -1px + 15px);
+    transform: translateX(var(--translate-x));
+}
+.card .card-image img {
+    border-radius: 50%;
+    width: 80px;
+}
+.card .card-header {
+    font-family: 'Arial';
+    padding-left: 15px;
+    padding-top: 1em;
+}

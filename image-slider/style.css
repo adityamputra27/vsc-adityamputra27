@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-container {
+    width: 32%;
+    margin: 5em auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    height: 300px;
+}
+#prevBtn, #nextBtn {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+#prevBtn {
+    position: absolute;
+    top: 35%;
+    z-index: 99;
+    left: 35%;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    background-color: #000;
+    width: 50px;
+}
+#nextBtn {
+    position: absolute;
+    top: 35%;
+    z-index: 99;
+    right: 35%;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    background-color: #000;
+    width: 50px;
+}
