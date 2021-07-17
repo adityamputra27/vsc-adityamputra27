@@ -9,27 +9,37 @@
     <div class="container" style="text-align: center;">
         <label for="">Masukkan Jumlah Peserta</label>
         <input type="text" id="jumlah">
-        <h1 id="hasil">0</h1>
+        <h1 id="hasil" style="font-size: 50px;">??</h1>
         <button id="acak" style="text-align: center;">Acak Pemenang</button>
     </div>
     
     <script>
         const button = document.querySelector('#acak')
+        const hasil = document.querySelector('#hasil')
+        const arr = []
+        
+        
+        function start() {
+            let value = document.querySelector('#jumlah').value
+            var interval = null
+            for (let i = 0; i <= value; i++) {
+                arr.push(i)
+            }
+            interval = setInterval(function () {
+                let result = arr[Math.floor(Math.random() * arr.length)]
+                hasil.style.color = 'green'
+                hasil.innerHTML = result
+            }, 50)
+
+            setTimeout(function () {
+                clearInterval(interval)
+            }, 3000)
+        }
+
         button.addEventListener('click', function () {
-            
-            var interval = null;
-
-            interval = setInterval(function(){
-                
-                let angka = document.getElementById('jumlah').value
-
-                for (let i = 0; i < angka.length; i++) {
-                    
-                }
-                
-            }, 50);
-
+            start()
         })
+
     </script>
 </body>
 </html>
